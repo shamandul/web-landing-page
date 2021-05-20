@@ -50,10 +50,71 @@ nav ul li a:hover {
 }
 
 .home {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 }
 
 .home picture img {
   width: 99vw;
+  height: 100vh;
+}
+
+.titulo {
+  position: absolute;
+  top: 20vh;
+  left: 40vw;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+h1 {
+
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.titulo h4 {
+
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.titulo h4::before {
+  display: inline-block;
+  content: "";
+  border: 1px solid #fff;
+  width: 190px;
+  transform: translateY(-4px);
+}
+
+/* Media Query*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+    color: #000;
+  }
+
+  .titulo h4 {
+    color: #000;
+  }
+
+  .titulo h4::before {
+    border: 1px solid #000;
+    width: 50px;
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 425px) {
+  .titulo {
+    top: 20vh;
+    left: 30vw;
+  }
+
+  h1 {
+
+    font-size: 2em;
+    color: #000;
+  }
 }
