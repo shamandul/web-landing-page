@@ -49,6 +49,7 @@ nav ul li a:hover {
   margin-top: 8vh;
 }
 
+/* Home */
 .home {
   height: 100vh;
   width: 100%;
@@ -88,6 +89,53 @@ h1 {
   transform: translateY(-4px);
 }
 
+/* what's a new? */
+.new {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.new h2 {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.new-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.view {
+  padding-left: 10vw;
+  width: 40vw;
+  height: 40vh;
+  background-color: #000;
+}
+
+.view:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  width: 40vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.description h3 {
+  text-align: center;
+  padding: 2em;
+}
+
+.description p {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
 /* Media Query*/
 @media (max-width: 768px) {
   h1 {
@@ -104,6 +152,21 @@ h1 {
     width: 50px;
     transform: translateY(-4px);
   }
+
+  .new-content {
+    flex-direction: column;
+  }
+
+  .view {
+    padding-left: 10vw;
+    width: 99vw;
+    height: 60vh;
+  }
+
+  .description {
+    width: 99vw;
+  }
+
 }
 
 @media (max-width: 425px) {
@@ -113,8 +176,13 @@ h1 {
   }
 
   h1 {
-
     font-size: 2em;
     color: #000;
+  }
+
+  .view {
+    padding-left: 10vw;
+    width: 80vw;
+    height: 40vh;
   }
 }
