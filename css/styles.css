@@ -136,6 +136,12 @@ h1 {
   padding-right: 2em;
 }
 
+.release {
+  text-align: center;
+  padding: 2em;
+}
+
+
 /* Media Query*/
 @media (max-width: 768px) {
   h1 {
@@ -159,8 +165,8 @@ h1 {
 
   .view {
     padding-left: 10vw;
-    width: 99vw;
-    height: 60vh;
+    width: 80vw;
+    height: 40vh;
   }
 
   .description {
@@ -180,9 +186,4 @@ h1 {
     color: #000;
   }
 
-  .view {
-    padding-left: 10vw;
-    width: 80vw;
-    height: 40vh;
-  }
 }
