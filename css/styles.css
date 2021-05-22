@@ -141,6 +141,48 @@ h1 {
   padding: 2em;
 }
 
+.description {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Discography */
+.discography {
+  padding: 2em;
+}
+
+.discography h2 {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.carrusel {
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.carrusel a img {
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  text-decoration: none;
+  width: 5vw;
+  height: 10vh;
+}
+
+.carrusel a:hover {
+  transform: scale(1.5);
+}
+
+.album {
+  width: 40vw;
+  height: 40vh;
+}
+
 
 /* Media Query*/
 @media (max-width: 768px) {
