@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
+:root {
+  --background-color: #000;
+  --text-color-primary: #fff;
+  --color-transparent: rgba(0, 0, 0, 0);
+  --nav-color-hover: rgba(64, 39, 156, 0.8);
+  --text-color-mobile: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Julius Sans One', sans-serif;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
 }
 
 
@@ -14,7 +22,7 @@ nav {
   top: 0;
   left: 0;
   /*padding: 10px;*/
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--color-transparent);
   width: 99%;
   z-index: 3;
   padding: 1.5em;
@@ -22,7 +30,7 @@ nav {
 
 nav ul {
   list-style: none;
-  background-color: rgb(0, 0, 0, 0);
+  background-color: var(--color-transparent);
   width: 100%;
 }
 
@@ -42,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: rgba(64, 39, 156, 0.8);
+  background-color: var(--nav-color-hover);
 }
 
 .container {
@@ -64,19 +72,19 @@ nav ul li a:hover {
   position: absolute;
   top: 20vh;
   left: 40vw;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--color-transparent);
 }
 
 h1 {
 
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--color-transparent);
   font-size: 4em;
   text-transform: uppercase;
 }
 
 .titulo h4 {
 
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--color-transparent);
   font-size: 1em;
   text-transform: uppercase;
 }
@@ -84,7 +92,7 @@ h1 {
 .titulo h4::before {
   display: inline-block;
   content: "";
-  border: 1px solid #fff;
+  border: 1px solid var(--text-color-primary);
   width: 190px;
   transform: translateY(-4px);
 }
@@ -112,7 +120,7 @@ h1 {
   padding-left: 10vw;
   width: 40vw;
   height: 40vh;
-  background-color: #000;
+  background-color: var(--background-color);
 }
 
 .view:hover {
@@ -142,7 +150,7 @@ h1 {
 }
 
 .description {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--color-transparent);
 }
 
 /* Discography */
@@ -167,8 +175,8 @@ h1 {
 
 
 .carrusel a img {
-  background-color: rgba(255, 255, 255, 0);
-  color: #fff;
+  background-color: var(--color-transparent);
+  color: var(--text-color-primary);
   text-decoration: none;
   width: 5vw;
   height: 10vh;
@@ -187,15 +195,15 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     font-size: 2em;
-    color: #000;
+    color: var(--text-color-mobile);
   }
 
   .titulo h4 {
-    color: #000;
+    color: var(--text-color-mobile);
   }
 
   .titulo h4::before {
-    border: 1px solid #000;
+    border: 1px solid var(--text-color-mobile);
     width: 50px;
     transform: translateY(-4px);
   }
@@ -224,7 +232,7 @@ h1 {
 
   h1 {
     font-size: 2em;
-    color: #000;
+    color: var(--text-color-mobile);
   }
 
 }
