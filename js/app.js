@@ -1,27 +1,31 @@
-let btn_left = document.getElementById("btn-left");
-let btn_right = document.getElementById("btn-right");
-let img_album = document.getElementById("img-album");
-let cont = 0;
-const images = ["images/secret.jpg", "images/behind.jpg", "images/man.jpg"];
+let slides = document.querySelector(".slider-items").children;
+let nextSlide = document.querySelector(".right-slide");
+let prevSlide = document.querySelector(".left-slide");
+let totalSlides = slides.length;
+let index = 0;
 
-// left and right button control
-btn_left.onclick = left;
-btn_right.onclick = right;
+nextSlide.onclick = function () {
+  next("next");
+};
+prevSlide.onclick = function () {
+  next("prev");
+};
+function next(direction) {
+  if (direction == "next") {
+    index++;
+    if (index == totalSlides) {
+      index = 0;
+    }
+  } else {
+    if (index == 0) {
+      index = totalSlides - 1;
+    } else {
+      index--;
+    }
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
 
-// Funciones
-function left(e) {
-  e.preventDefault();
-  cont--;
-  if (cont < 0) {
-    cont = images.length - 1;
-  }
-  img_album.srcset = images[cont];
-}
-function right(e) {
-  e.preventDefault();
-  cont++;
-  if (cont > images.length - 1) {
-    cont = 0;
-  }
-  img_album.srcset = images[cont];
+  slides[index].classList.add("active");
 }
