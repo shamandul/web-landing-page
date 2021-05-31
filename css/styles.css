@@ -8,6 +8,9 @@
   --text-color-mobile: #000;
   --black-transparent: rgba(0, 0, 0, .5);
   --border-box-color: #444444;
+  --backgraund-input: rgba(24, 23, 29, 0.527);
+  --color-button-reset: rgb(122, 19, 19);
+  --color-button-send: rgb(19, 122, 58);
 }
 
 * {
@@ -258,10 +261,66 @@ h1 {
   right: 30px;
 }
 
-/*.album {
-  width: 40vw;
-  height: 40vh;
-}*/
+.contact h2 {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.form-contact {
+  max-width: 700px;
+  margin: 20px auto;
+  /* overflow: hidden; */
+  background-color: rgb(150, 160, 11);
+}
+
+.content-form p,
+.content-form input,
+.content-form textarea {
+  margin-top: 1em;
+}
+
+.content-form input {
+  border: none;
+  background-color: var(--backgraund-input);
+  min-width: 100%;
+  min-height: 2em;
+  padding-left: 1em;
+
+}
+
+.content-form textarea {
+  border: none;
+  padding-left: 1em;
+  padding-top: 1em;
+  background-color: var(--backgraund-input);
+  min-width: 100%;
+  min-height: 33vh;
+}
+
+.content-form-button {
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+
+.content-form-button button {
+  margin-left: 1em;
+  width: 10em;
+  height: 3em;
+}
+
+.reset {
+  background-color: var(--color-button-reset);
+}
+
+.send {
+  background-color: var(--color-button-send);
+}
+
 
 
 /* Media Query*/
