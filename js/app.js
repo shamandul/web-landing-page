@@ -1,8 +1,12 @@
 let slides = document.querySelector(".slider-items").children;
 let nextSlide = document.querySelector(".right-slide");
 let prevSlide = document.querySelector(".left-slide");
+let send = document.querySelector(".send");
 let totalSlides = slides.length;
+
 let index = 0;
+
+/**  Onclick method to control the directions of the Slides */
 
 nextSlide.onclick = function () {
   next("next");
@@ -10,7 +14,9 @@ nextSlide.onclick = function () {
 prevSlide.onclick = function () {
   next("prev");
 };
-function next(direction) {
+/** Function to control the direction of the slide */
+
+next = (direction) => {
   if (direction == "next") {
     index++;
     if (index == totalSlides) {
@@ -28,4 +34,44 @@ function next(direction) {
   }
 
   slides[index].classList.add("active");
-}
+};
+/** Control of the onclick method of sending the email */
+send.onclick = (e) => {
+  e.preventDefault();
+  let nameUser = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let comment = document.querySelector("#comment").value;
+  let error = check(nameUser, email, comment);
+  let errorName = document.querySelector("#error-name");
+  let errorEmail = document.querySelector("#error-email");
+  let errorComment = document.querySelector("#error-comment");
+
+  errorName.classList.remove("error");
+  errorEmail.classList.remove("error");
+  errorComment.classList.remove("error");
+  if (error == "Wrong name") {
+    errorName.classList.add("error");
+    document.querySelector("#name").focus();
+  }
+  if (error == "Wrong email") {
+    errorEmail.classList.add("error");
+    document.querySelector("#email").focus();
+  }
+  if (error == "Comment error") {
+    errorComment.classList.add("error");
+    document.querySelector("#comment").focus();
+  }
+};
+/** function to check the form data */
+check = (nameUser, email, comment) => {
+  if (nameUser == null || nameUser == "") {
+    return "Wrong name";
+  }
+  if (email == null || email == "") {
+    return "Wrong email";
+  }
+  if (comment == null || comment == "") {
+    return "Comment error";
+  }
+  return "Ok";
+};

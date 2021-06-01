@@ -10,7 +10,10 @@
   --border-box-color: #444444;
   --backgraund-input: rgba(24, 23, 29, 0.527);
   --color-button-reset: rgb(122, 19, 19);
+  --color-button-reset-hover: rgb(182, 43, 43);
   --color-button-send: rgb(19, 122, 58);
+  --color-button-send-hover: rgb(63, 173, 105);
+
 }
 
 * {
@@ -274,7 +277,7 @@ h1 {
   background-color: rgb(150, 160, 11);
 }
 
-.content-form p,
+.content-form label,
 .content-form input,
 .content-form textarea {
   margin-top: 1em;
@@ -286,7 +289,12 @@ h1 {
   min-width: 100%;
   min-height: 2em;
   padding-left: 1em;
+}
 
+.content-form input:focus {
+  border-width: 5px;
+  border-color: var(--nav-color-hover);
+  border-style: solid;
 }
 
 .content-form textarea {
@@ -296,6 +304,22 @@ h1 {
   background-color: var(--backgraund-input);
   min-width: 100%;
   min-height: 33vh;
+}
+
+.content-form textarea:focus {
+  border-width: 5px;
+  border-color: var(--nav-color-hover);
+  border-style: solid;
+}
+
+.message-error {
+  color: red;
+  visibility: hidden;
+}
+
+.error {
+  visibility: visible;
+  color: red;
 }
 
 .content-form-button {
@@ -321,6 +345,15 @@ h1 {
   background-color: var(--color-button-send);
 }
 
+.content-form-button .reset:hover {
+  background-color: var(--color-button-reset-hover);
+  color: var(--background-color);
+}
+
+.content-form-button .send:hover {
+  background-color: var(--color-button-send-hover);
+  color: var(--background-color);
+}
 
 
 /* Media Query*/

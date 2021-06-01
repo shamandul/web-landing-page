@@ -93,16 +93,25 @@
         <div class="form-contact">
           <form action="">
             <div class="content-form">
-              <p>Name:</p>
+              <label>Name:</label>
               <input type="text" name="name" id="name" required />
+              <span id="error-name" class="message-error"
+                >An error has occurred with the name</span
+              >
             </div>
             <div class="content-form">
-              <p>Email:</p>
+              <label>Email:</label>
               <input type="email" name="email" id="email" required />
+              <span id="error-email" class="message-error"
+                >An error has occurred with the email</span
+              >
             </div>
             <div class="content-form">
-              <p>Comment</p>
+              <label>Comment</label>
               <textarea name="comment" id="comment"></textarea>
+              <span id="error-comment" class="message-error"
+                >The comment cannot be empty</span
+              >
             </div>
             <div class="content-form-button">
               <button class="reset" type="reset">Cancel</button>
