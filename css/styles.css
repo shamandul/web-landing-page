@@ -24,44 +24,8 @@
   color: var(--text-color-primary);
 }
 
-
-/* nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--color-transparent);
-  width: 99%;
-  z-index: 3;
-  padding: 1.5em;
-}
-
-nav ul {
-  list-style: none;
-  background-color: var(--color-transparent);
-  width: 100%;
-}
-
-nav ul li {
-  display: inline;
-  justify-content: space-around;
-  text-align: center;
-  background-color: rgb(0, 0, 0, 0);
-  width: 100%;
-}
-
-nav ul li a {
-  padding: 1em;
-  text-decoration: none;
-  background-color: rgb(0, 0, 0, 0);
-  font-size: 2em;
-}
-
-nav ul li a:hover {
-  background-color: var(--nav-color-hover);
-} */
 nav {
   height: 10vh;
-  /* background-color: var(--backgraund-input); */
 }
 
 .nav-links {
@@ -387,6 +351,7 @@ h1 {
 
   nav {
     position: relative;
+
   }
 
   .menu {
@@ -436,9 +401,6 @@ h1 {
     transition: all 0.5s ease 0.8s;
   }
 
-  .nav-links li:nth-child(5) {
-    transition: all 0.5s ease 1s;
-  }
 
   li.fade {
     opacity: 1;

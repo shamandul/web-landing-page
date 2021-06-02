@@ -19,12 +19,16 @@ menu.addEventListener("click", () => {
 
 /**  Onclick method to control the directions of the Slides */
 
-nextSlide.onclick = function () {
+nextSlide.addEventListener("click", () => {
   next("next");
-};
-prevSlide.onclick = function () {
+});
+
+// nextSlide.onclick = function () {
+//   next("next");
+// };
+prevSlide.addEventListener("click", () => {
   next("prev");
-};
+});
 /** Function to control the direction of the slide */
 
 next = (direction) => {
