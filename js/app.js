@@ -1,10 +1,21 @@
-let slides = document.querySelector(".slider-items").children;
-let nextSlide = document.querySelector(".right-slide");
-let prevSlide = document.querySelector(".left-slide");
-let send = document.querySelector(".send");
-let totalSlides = slides.length;
+const slides = document.querySelector(".slider-items").children;
+const nextSlide = document.querySelector(".right-slide");
+const prevSlide = document.querySelector(".left-slide");
+const send = document.querySelector(".send");
+const totalSlides = slides.length;
+const menu = document.querySelector(".menu");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
 let index = 0;
+//** Function for menu  */
+
+menu.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  links.forEach((link) => {
+    link.classList.toggle("fade");
+  });
+});
 
 /**  Onclick method to control the directions of the Slides */
 
