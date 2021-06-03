@@ -350,16 +350,17 @@ h1 {
   }
 
   nav {
-    position: relative;
-
+    position: absolute;
+    top: 5%;
+    right: 99%;
   }
 
   .menu {
     position: absolute;
     cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50);
+    /* right: 5%;
+top: 50%; */
+    transform: translate(5%, -50);
     z-index: 2;
   }
 
@@ -369,15 +370,15 @@ h1 {
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    -webkit-clip-path: circle(100px at 90% -10%);
-    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 10% -10%);
+    clip-path: circle(100px at 10% -10%);
     transition: all 1s ease-out;
     pointer-events: none;
   }
 
   .nav-links.open {
-    -webkit-clip-path: circle(1000px at 90% -10%);
-    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1050px at 10% -10%);
+    clip-path: circle(1050px at 10% -10%);
     pointer-events: all;
   }
 
