@@ -6,12 +6,14 @@ const totalSlides = slides.length;
 const menu = document.querySelector(".menu");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
-
+const disco = document.querySelector(".slider");
 let index = 0;
 //** Function for menu  */
 
 menu.addEventListener("click", () => {
   navLinks.classList.toggle("open");
+  menu.classList.toggle("close");
+  disco.classList.toggle("m-no");
   links.forEach((link) => {
     link.classList.toggle("fade");
   });
